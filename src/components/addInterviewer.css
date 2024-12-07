@@ -1,0 +1,41 @@
+.addUser {
+    width: 50%;
+    margin: auto;
+
+    & h2 {
+        margin: 8px 0;
+    }
+    
+    & form {
+        display: flex;
+        flex-direction: column;
+
+        & input {
+            background-color: var(--color_1);
+            padding: 12px 8px;
+            color: var(--fontColor);
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+        }
+        & input:not(:last-of-type) {
+            margin-bottom: 8px;
+        }
+        & input:hover::placeholder,
+        & input:focus::placeholder {
+            opacity: 0;
+            transition: var(--smooth);
+        }
+
+        & input[type="button"] {
+            background-color: var(--color_3);
+            cursor: pointer;
+        }
+    }
+}
+/* On phones */
+@media (max-width: 767px) {
+    section {
+        width: 100%;
+    }
+}

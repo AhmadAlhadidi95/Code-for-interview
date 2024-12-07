@@ -1,0 +1,52 @@
+.allUsers {
+
+    & h2 {
+        margin: 8px 0;
+        /* border-bottom: 1px solid; */
+    }
+
+    .box {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+        text-align: center;
+
+        & b {
+            /* padding-bottom: 6px; */
+            border-bottom: 1px solid;
+            opacity: .5;
+        }
+
+        & span {
+            /* padding-bottom: 6px; */
+            border-bottom: 1px solid;
+        }
+
+        .btns {
+
+            & button {
+                width: calc(95% / 2);
+                background-color: var(--color_1);
+                border: none;
+                padding: 6px 0;
+                cursor: pointer;
+                
+                & a {
+                    color: yellow;
+                    font-weight: bold;
+                }
+            }
+            & button:nth-child(2) {
+                margin-left: 5px;
+
+                & a {
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .box:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}

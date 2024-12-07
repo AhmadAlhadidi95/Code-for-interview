@@ -1,0 +1,40 @@
+header {
+    height: 4rem;
+    background-color: var(--color_1);
+    border-radius: var(--bow);
+    box-shadow: var(--shadow);
+
+    & ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+
+        & a {
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--smooth);
+        }
+        & a:not(:last-of-type) {
+            margin-right: 8px;
+        }
+        & a:hover {
+            color: var(--color_3);
+        }
+    }
+}
+/* On phones */
+@media (max-width: 767px) {
+    header {
+        height: fit-content;
+
+        & ul {
+            flex-direction: column;
+    
+            & a:not(:last-of-type) {
+                margin-bottom: 8px;
+                margin-right: 0px;
+            }
+        }
+    }
+}
